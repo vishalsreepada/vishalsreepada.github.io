@@ -31,7 +31,7 @@
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Vishal Sreepada</h1>
       <h2 class="hero-title">Data Engineer <span class="accent">@ Amazon</span></h2>
-      <p class="hero-subtitle">Building scalable data pipelines, AI-powered automation,<br/>and data lake infrastructure at enterprise scale.</p>
+      <p class="hero-subtitle">5+ years building high-scale data systems at Amazon —<br/>pipelines, data lakes, and AI-powered automation serving global operations.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -60,8 +60,8 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm an <strong>L5 Data Engineer at Amazon</strong> with 5+ years of experience designing and delivering large-scale data infrastructure. Based in Austin, TX, I build end-to-end pipelines, AI-powered automation systems, and data lake solutions that serve thousands of internal stakeholders across global operations.</p>
-          <p>My work spans real-time telemetry ingestion, petabyte-scale data lakes, AI-driven metadata automation with Amazon Bedrock, and security certification for confidential data processing — all on AWS.</p>
+          <p>I'm a <strong>Senior Data Engineer at Amazon</strong> with 5+ years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
+          <p>I specialize in turning complex, high-volume data problems into reliable, scalable solutions — cutting a 40-hour pipeline to 30 minutes, automating 6,000+ dataset registrations, and leading security certification to unlock confidential-data processing at scale.</p>
           <p>I hold a <strong>Master's in Computer Engineering from George Mason University</strong> (GPA 3.9, Outstanding Academic Achievement Award) and am currently pursuing an MBA at Ottawa University.</p>
         </div>
         <div class="about-stats">
@@ -197,14 +197,14 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Data Engineer II &mdash; L5</h3>
+              <h3>Senior Data Engineer (L5)</h3>
               <span class="timeline-company">Amazon</span>
             </div>
             <span class="timeline-date">May 2024 – Present &nbsp;·&nbsp; Austin, TX</span>
             <ul class="timeline-bullets">
-              <li>Built the GOSS Data Catalog Service — automated metadata registration and AI-powered enrichment for 6,000+ data tables, reducing onboarding from ~60 minutes per table to zero human intervention.</li>
-              <li>Architected an AI-powered data lake onboarding interface using Amazon Bedrock, featuring a confidence scoring algorithm and smart routing that handles 60% of queries in under 10ms.</li>
-              <li>Led Andes 3 migration for the Engineering Plan &amp; Analytics org, publishing wikis and coordinating knowledge transfer across multiple teams.</li>
+              <li>Architected and delivered an AI-powered data catalog service automating metadata registration and enrichment for 6,000+ datasets — reducing onboarding from ~60 minutes per table to zero human intervention using Amazon Bedrock and Step Functions orchestration.</li>
+              <li>Designed a self-service conversational AI interface for enterprise data lake onboarding, featuring a custom 4-factor confidence scoring algorithm and smart routing that handles 60% of queries in &lt;10ms, targeting 200+ daily table onboardings.</li>
+              <li>Led org-wide migration to a next-generation dataset platform, owning documentation and cross-team coordination to ensure zero-disruption adoption across the Engineering Plan &amp; Analytics organization.</li>
             </ul>
           </div>
         </div>
@@ -218,11 +218,11 @@
             </div>
             <span class="timeline-date">Apr 2022 – Apr 2024 &nbsp;·&nbsp; Greater Seattle Area</span>
             <ul class="timeline-bullets">
-              <li>Reduced a 1TB Cognos data pipeline runtime from 40 hours to 30 minutes through cross-account S3 strategy, partition pruning, and SparkSQL filtering — a 98% improvement.</li>
-              <li>Drove migration of 5 legacy PMO tools into a unified platform serving 600+ users across Europe, authoring SQL/Glue backfill scripts and executing a planned single-day cutover across 50+ tables.</li>
-              <li>Developed CAT monitoring automation using Lambda and CDK to auto-create safety tickets, contributing to a 95% reduction in serious powered industrial truck incidents across ~800 operators per site.</li>
-              <li>Built multi-vendor PIVT telemetry pipelines extracting data from 40+ endpoints, backfilling two years of historical data into the enterprise data lake.</li>
-              <li>Led ASR "Orange" security certification for the Ganges Data Lake, enabling storage and processing of Confidential-classified data across the organization.</li>
+              <li>Cut a 1TB executive reporting pipeline runtime from 40 hours to 30 minutes (98% reduction) by identifying only 10GB was required for reporting, then implementing cross-account S3 crawlers with SparkSQL partition pruning.</li>
+              <li>Led consolidation of 5 legacy project management tools into a single unified data platform serving 600+ users across Europe — owned schema mapping for 50+ tables, backfill scripting, and coordinated a planned single-day production cutover with zero data loss.</li>
+              <li>Built an event-driven warehouse safety monitoring system (Lambda + CDK) that automated ticket creation for collision-avoidance sensor failures, eliminating ~200 daily manual interventions and contributing to a 95% reduction in serious industrial incidents across sites with 800+ operators.</li>
+              <li>Engineered multi-vendor fleet telemetry pipelines extracting from 40+ API endpoints, executed a 2-year historical backfill into the enterprise data lake, and replaced a legacy Redshift cluster with a lake-native workflow for faster processing.</li>
+              <li>Owned end-to-end security certification to enable Confidential-classified data processing in the enterprise data lake — authored architecture documentation, threat mitigations, and worked cross-organizationally to achieve clearance.</li>
             </ul>
           </div>
         </div>
@@ -273,8 +273,8 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">GOSS Data Catalog Service</h3>
-          <p class="project-desc">Automated the full lifecycle of dataset metadata management for 6,000+ Glue tables. Built an AI-powered enrichment pipeline using Amazon Bedrock (Claude Sonnet) to generate table and column descriptions with PII guardrails. Reduced onboarding from ~60 min/table to zero human intervention via Step Functions orchestration and real-time schema drift detection.</p>
+          <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
+          <p class="project-desc">Eliminated manual dataset onboarding for 6,000+ data tables — from ~60 min/table to zero human intervention. Built an AI enrichment pipeline using Amazon Bedrock to auto-generate table descriptions, column metadata, and READMEs with PII guardrails. Step Functions orchestration handles bulk registration, schema drift detection via EventBridge, and incremental AI re-enrichment on schema changes.</p>
           <div class="project-tags">
             <span class="tag small">AWS Step Functions</span>
             <span class="tag small">Amazon Bedrock</span>
@@ -289,8 +289,8 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">GESS Operational Insights Pipeline</h3>
-          <p class="project-desc">Transformed a 1TB executive data pipeline that ran for 40+ hours into a 30-minute workflow — a 98% reduction. Identified that only 10GB of the 1TB dataset was needed for reporting; implemented cross-account S3 crawlers with SparkSQL partition pruning to eliminate unnecessary data processing at the transform stage.</p>
+          <h3 class="project-title">Executive Reporting Pipeline — 98% Runtime Reduction</h3>
+          <p class="project-desc">Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours. Root cause: only 10GB of data was needed for reporting. Redesigned the pipeline with cross-account S3 crawlers, SparkSQL partition pruning, and targeted data filtering at the transform stage — cutting runtime to 30 minutes and unblocking leadership reporting workflows.</p>
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">S3 Cross-Account</span>
@@ -304,8 +304,8 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">GES Source Data Migration</h3>
-          <p class="project-desc">Consolidated 5 legacy PMO tools into a single unified platform serving 600+ users across the Europe-PMO organization. Mapped 50+ data tables, engineered retrofit pipelines for downstream dependencies, and executed a planned single-day cutover. Included a risk module using DocumentDB with hourly flattening to S3 for real-time project risk visibility.</p>
+          <h3 class="project-title">PMO Data Platform Consolidation</h3>
+          <p class="project-desc">Decommissioned 5 legacy project management tools and migrated 600+ Europe-PMO users to a single unified data platform in a planned one-day cutover. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, engineered retrofit pipelines for downstream tool dependencies, and built a DocumentDB-backed risk module with hourly S3 flattening for real-time visibility.</p>
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">Step Functions</span>
@@ -319,8 +319,8 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">CAT Safety Monitoring & Alerts</h3>
-          <p class="project-desc">Built an automated ticketing workflow for Collision Avoidance Technology (CAT) infrastructure that previously required manual intervention for ~200 daily anchor failures. Lambda/CDK automation now creates tickets within seconds of anchor or network failures and deduplicates repeat alerts — contributing to a 95% reduction in serious powered industrial truck incidents across ~800 operators per site.</p>
+          <h3 class="project-title">Warehouse Safety Monitoring Automation</h3>
+          <p class="project-desc">Replaced a fully manual process (~200 daily anchor failure notifications) with an event-driven ticketing system using Lambda and AWS CDK. Tickets are created within seconds of collision-avoidance sensor failures and deduplicated on repeats — eliminating manual overhead and contributing to a 95% reduction in serious powered industrial truck incidents across facilities with 800+ operators.</p>
           <div class="project-tags">
             <span class="tag small">AWS Lambda</span>
             <span class="tag small">AWS CDK</span>
