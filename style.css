@@ -461,6 +461,115 @@ section { padding: 100px 2rem; }
 
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
 
+/* ===================== CERTIFICATIONS ===================== */
+.certs-row {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.certs-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cert-issuer {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cert-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.cert-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--mono);
+}
+
+.cert-expired {
+  opacity: 0.45;
+}
+
+/* ===================== EDUCATION ===================== */
+#education { background: var(--bg-card); }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.edu-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s;
+}
+
+.edu-card:hover { border-color: var(--accent); }
+
+.edu-header { margin-bottom: 0.25rem; }
+
+.edu-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.edu-field {
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.edu-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--mono);
+}
+
+.edu-award {
+  font-size: 0.8rem;
+  color: #f6c90e;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
 /* ===================== CONTACT ===================== */
 #contact { background: var(--bg-card); }
 
@@ -523,10 +632,13 @@ footer {
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: 1fr; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
+  .edu-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
   .nav-links { display: none; }
   .skills-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .certs-grid { grid-template-columns: 1fr; }
 }
