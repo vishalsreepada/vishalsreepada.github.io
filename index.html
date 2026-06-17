@@ -30,7 +30,7 @@
     <div class="hero-content">
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Vishal Sreepada</h1>
-      <h2 class="hero-title"><span class="accent">Lead Data Engineer</span></h2>
+      <h2 class="hero-title"><span class="accent">Data Engineer</span></h2>
       <p class="hero-subtitle">5 years designing enterprise-scale data pipelines,<br/>data lakes, and AI-powered automation.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -60,7 +60,7 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a <strong>Data Engineer II at Amazon</strong> with 5 years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
+          <p>I'm a <strong>Lead Data Engineer at Amazon</strong> with 5 years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
           <p>I specialize in turning complex, high-volume data problems into reliable, scalable solutions. Cutting a 40-hour pipeline to 30 minutes, automating 6,000 dataset registrations, and leading security certification to unlock confidential-data processing at scale.</p>
           <p>I hold a <strong>Master's in Computer Engineering from George Mason University</strong> and am currently pursuing an MBA at Ottawa University.</p>
         </div>
@@ -149,9 +149,24 @@
             <span class="tag">Athena</span>
             <span class="tag">Lake Formation</span>
             <span class="tag">Bedrock</span>
+            <span class="tag">Bedrock AgentCore</span>
             <span class="tag">QuickSight</span>
             <span class="tag">EventBridge</span>
             <span class="tag">SNS / SQS</span>
+            <span class="tag">SES</span>
+            <span class="tag">CloudFront</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">CodePipeline</span>
+            <span class="tag">CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">AI & Agents</h3>
+          <div class="skill-tags">
+            <span class="tag">Strands Agents SDK</span>
+            <span class="tag">Amazon Bedrock</span>
+            <span class="tag">Bedrock AgentCore</span>
           </div>
         </div>
 
@@ -261,14 +276,22 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
-          <p class="project-desc">Eliminated manual dataset onboarding for 6,000+ data tables. Reduced time from ~60 min/table to zero human intervention. Built an AI enrichment pipeline using Amazon Bedrock to auto-generate table descriptions, column metadata, and READMEs with PII guardrails. Step Functions orchestration handles bulk registration, schema drift detection via EventBridge, and incremental AI re-enrichment on schema changes.</p>
+          <p class="project-desc">Eliminated manual dataset onboarding for 6,000+ data tables. Reduced time from ~60 min/table to zero human intervention. Built an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore Runtime (Claude Sonnet 4) to auto-generate table descriptions, column metadata, and READMEs with PII guardrails. Step Functions Distributed Map orchestrates bulk registration, cross-account EventBridge detects schema drift in real time, and incremental AI re-enrichment runs only for new columns.</p>
           <div class="project-tags">
-            <span class="tag small">AWS Step Functions</span>
             <span class="tag small">Amazon Bedrock</span>
+            <span class="tag small">Bedrock AgentCore</span>
+            <span class="tag small">Strands Agents SDK</span>
+            <span class="tag small">AWS Step Functions</span>
             <span class="tag small">Lambda</span>
-            <span class="tag small">DynamoDB</span>
+            <span class="tag small">DynamoDB Streams</span>
             <span class="tag small">AWS Glue</span>
             <span class="tag small">EventBridge</span>
+            <span class="tag small">S3</span>
+            <span class="tag small">Athena</span>
+            <span class="tag small">Lake Formation</span>
+            <span class="tag small">SNS / SQS</span>
+            <span class="tag small">AWS CDK</span>
+            <span class="tag small">CloudWatch</span>
           </div>
         </div>
 
@@ -281,9 +304,12 @@
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">S3 Cross-Account</span>
+            <span class="tag small">Lambda</span>
             <span class="tag small">Athena</span>
             <span class="tag small">QuickSight</span>
             <span class="tag small">Apache Airflow</span>
+            <span class="tag small">SES</span>
+            <span class="tag small">CloudFormation</span>
           </div>
         </div>
 
@@ -296,9 +322,11 @@
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">Step Functions</span>
+            <span class="tag small">Lambda</span>
             <span class="tag small">DocumentDB</span>
             <span class="tag small">Aurora MySQL</span>
-            <span class="tag small">Lambda</span>
+            <span class="tag small">DynamoDB</span>
+            <span class="tag small">S3</span>
           </div>
         </div>
 
@@ -322,13 +350,22 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">AI-Powered Data Lake Onboarding</h3>
-          <p class="project-desc">Designed a conversational AI interface to automate table onboarding into the enterprise data lake. Architected a 4-factor confidence scoring algorithm (explicit mentions, field completeness, ambiguity penalty, context clarity) with smart routing that handles 60% of queries in &lt;10ms, bypassing AI for templates and common patterns. Target: 200+ daily table onboardings at sub-2s response.</p>
+          <p class="project-desc">Designed a conversational AI interface to automate table onboarding into the enterprise data lake. Architected a 4-factor confidence scoring algorithm (explicit mentions, field completeness, ambiguity penalty, context clarity) with smart routing that handles 60% of queries in &lt;10ms using Bedrock AgentCore. DynamoDB Streams trigger Lambda orchestration for automated S3 directory creation, Glue catalog setup, and Athena table provisioning. Dynamic Airflow DAG builder generates pipeline tasks at runtime for each onboarded table.</p>
           <div class="project-tags">
             <span class="tag small">Amazon Bedrock</span>
+            <span class="tag small">Bedrock AgentCore</span>
+            <span class="tag small">Lambda</span>
             <span class="tag small">DynamoDB Streams</span>
             <span class="tag small">Step Functions</span>
             <span class="tag small">API Gateway</span>
             <span class="tag small">CloudFront</span>
+            <span class="tag small">S3</span>
+            <span class="tag small">Glue Catalog</span>
+            <span class="tag small">Athena</span>
+            <span class="tag small">Apache Airflow</span>
+            <span class="tag small">SNS</span>
+            <span class="tag small">SES</span>
+            <span class="tag small">CloudWatch</span>
           </div>
         </div>
 
