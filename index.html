@@ -30,8 +30,8 @@
     <div class="hero-content">
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Vishal Sreepada</h1>
-      <h2 class="hero-title"><span class="accent">Data Engineer</span></h2>
-      <p class="hero-subtitle">5 years designing enterprise-scale data pipelines,<br/>data lakes, and AI-powered automation.</p>
+      <h2 class="hero-title"><span class="accent">Data Engineer at Amazon</span></h2>
+      <p class="hero-subtitle">Building AI-powered data systems that automate<br/>what used to take humans hours.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -45,11 +45,13 @@
           <span class="dot green"></span>
           <span class="code-title">pipeline.py</span>
         </div>
-        <pre class="code-body"><span class="kw">def</span> <span class="fn">build_pipeline</span>():
-    source  = <span class="str">s3.read_parquet</span>(...)
-    clean   = <span class="str">transform</span>(source)
-    sink    = <span class="str">redshift.write</span>(clean)
-    <span class="kw">return</span> sink</pre>
+        <pre class="code-body"><span class="kw">@agent</span>.<span class="fn">tool</span>
+<span class="kw">def</span> <span class="fn">enrich_dataset</span>(table):
+    schema  = <span class="str">glue.get_schema</span>(table)
+    context = <span class="str">s3.get_context</span>(table)
+    <span class="kw">return</span> <span class="str">bedrock.generate</span>(
+        schema, context
+    )</pre>
       </div>
     </div>
   </section>
