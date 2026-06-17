@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Sreepada | Data Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">VS</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Vishal Sreepada</h1>
+      <h2 class="hero-title">Data Engineer <span class="accent">@ Amazon</span></h2>
+      <p class="hero-subtitle">Building scalable data pipelines and infrastructure<br/>that power data-driven decisions at scale.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-block">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-title">pipeline.py</span>
+        </div>
+        <pre class="code-body"><span class="kw">def</span> <span class="fn">build_pipeline</span>():
+    source  = <span class="str">s3.read_parquet</span>(...)
+    clean   = <span class="str">transform</span>(source)
+    sink    = <span class="str">redshift.write</span>(clean)
+    <span class="kw">return</span> sink</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a Data Engineer with <strong>5 years of experience</strong> designing and building large-scale data infrastructure. Currently working as an <strong>L5 Data Engineer at Amazon</strong>, where I focus on building reliable, high-throughput data pipelines that serve millions of customers.</p>
+          <p>I care deeply about data quality, pipeline observability, and making data accessible to the teams that need it.</p>
+          <p class="placeholder-note">[ More details coming soon ]</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">L5</span>
+            <span class="stat-label">Amazon Level</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">—</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">—</span>
+            <span class="stat-label">TB Data Processed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag placeholder">+ more</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Data Processing</h3>
+          <div class="skill-tags">
+            <span class="tag">Apache Spark</span>
+            <span class="tag placeholder">+ more</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Cloud & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS</span>
+            <span class="tag placeholder">+ more</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Data Warehousing</h3>
+          <div class="skill-tags">
+            <span class="tag placeholder">Coming soon</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Orchestration</h3>
+          <div class="skill-tags">
+            <span class="tag placeholder">Coming soon</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Other</h3>
+          <div class="skill-tags">
+            <span class="tag placeholder">Coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Data Engineer — L5</h3>
+              <span class="timeline-company">Amazon</span>
+            </div>
+            <span class="timeline-date">[ Date ] – Present</span>
+            <ul class="timeline-bullets">
+              <li class="placeholder-note">[ Key responsibility or achievement ]</li>
+              <li class="placeholder-note">[ Key responsibility or achievement ]</li>
+              <li class="placeholder-note">[ Key responsibility or achievement ]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>[ Previous Role ]</h3>
+              <span class="timeline-company">[ Company ]</span>
+            </div>
+            <span class="timeline-date">[ Date ] – [ Date ]</span>
+            <ul class="timeline-bullets">
+              <li class="placeholder-note">[ Key responsibility or achievement ]</li>
+              <li class="placeholder-note">[ Key responsibility or achievement ]</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card placeholder-card">
+          <div class="project-card-header">
+            <span class="project-icon">&#9670;</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub">&#128279;</a>
+            </div>
+          </div>
+          <h3 class="project-title">[ Project Name ]</h3>
+          <p class="project-desc">[ Brief description of the project, the problem it solved, and the scale/impact. ]</p>
+          <div class="project-tags">
+            <span class="tag small">Python</span>
+            <span class="tag small">AWS</span>
+            <span class="tag small placeholder">+ more</span>
+          </div>
+        </div>
+
+        <div class="project-card placeholder-card">
+          <div class="project-card-header">
+            <span class="project-icon">&#9670;</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub">&#128279;</a>
+            </div>
+          </div>
+          <h3 class="project-title">[ Project Name ]</h3>
+          <p class="project-desc">[ Brief description of the project, the problem it solved, and the scale/impact. ]</p>
+          <div class="project-tags">
+            <span class="tag small placeholder">Coming soon</span>
+          </div>
+        </div>
+
+        <div class="project-card placeholder-card">
+          <div class="project-card-header">
+            <span class="project-icon">&#9670;</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub">&#128279;</a>
+            </div>
+          </div>
+          <h3 class="project-title">[ Project Name ]</h3>
+          <p class="project-desc">[ Brief description of the project, the problem it solved, and the scale/impact. ]</p>
+          <div class="project-tags">
+            <span class="tag small placeholder">Coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">I'm always open to interesting conversations and opportunities.</p>
+      <a href="mailto:vishal.sreepada.77@gmail.com" class="btn btn-primary">Say Hello</a>
+      <div class="social-links">
+        <a href="#" class="social-link" title="GitHub">GitHub</a>
+        <a href="#" class="social-link" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & built by Vishal Sreepada</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
