@@ -407,6 +407,60 @@ section { padding: 100px 2rem; }
   color: var(--accent);
 }
 
+/* ===================== TIMELINE SUB-ROLES ===================== */
+.timeline-company-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-company-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.timeline-company-span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--mono);
+}
+
+.timeline-subroles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.timeline-subrole {
+  position: relative;
+}
+
+.timeline-subrole::before {
+  content: '';
+  position: absolute;
+  left: -1.4rem;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg-card2);
+  border: 1.5px solid var(--accent);
+}
+
+.timeline-subrole-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
 /* ===================== PROJECTS ===================== */
 .projects-grid {
   display: grid;
