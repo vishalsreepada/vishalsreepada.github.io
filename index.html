@@ -31,7 +31,7 @@
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Vishal Sreepada</h1>
       <h2 class="hero-title"><span class="accent">Data Engineer at Amazon</span></h2>
-      <p class="hero-subtitle">Building AI-powered data systems that automate<br/>what used to take humans hours.</p>
+      <p class="hero-subtitle">Building production data infrastructure at scale —<br/>pipelines, platforms, and AI-powered automation<br/>serving thousands of stakeholders.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -45,13 +45,13 @@
           <span class="dot green"></span>
           <span class="code-title">pipeline.py</span>
         </div>
-        <pre class="code-body"><span class="kw">@agent</span>.<span class="fn">tool</span>
-<span class="kw">def</span> <span class="fn">enrich_dataset</span>(table):
-    schema  = <span class="str">glue.get_schema</span>(table)
-    context = <span class="str">s3.get_context</span>(table)
-    <span class="kw">return</span> <span class="str">bedrock.generate</span>(
-        schema, context
-    )</pre>
+        <pre class="code-body"><span class="kw">@dag</span>(<span class="fn">schedule</span>=<span class="str">"@daily"</span>)
+<span class="kw">def</span> <span class="fn">enterprise_pipeline</span>():
+    raw    = <span class="str">glue_transform</span>(layer=<span class="str">"raw"</span>)
+    refine = <span class="str">glue_transform</span>(layer=<span class="str">"refine"</span>)
+    notify = <span class="str">ses_notify</span>(on=<span class="str">"success"</span>)
+
+    raw >> refine >> notify</pre>
       </div>
     </div>
   </section>
