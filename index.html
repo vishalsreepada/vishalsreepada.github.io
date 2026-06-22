@@ -62,7 +62,7 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a <strong>Lead Data Engineer at Amazon</strong> with 5 years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
+          <p>I'm a <strong>Lead Data Engineer at Amazon</strong> with 5+ years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
           <p>I specialize in turning complex, high-volume data problems into reliable, scalable solutions. Cutting a 40-hour pipeline to 30 minutes, automating 6,000 dataset registrations, and leading security certification to unlock confidential-data processing at scale.</p>
           <p>I hold a <strong>Master's in Computer Engineering from George Mason University</strong> and am currently pursuing an MBA at Ottawa University.</p>
         </div>
@@ -131,6 +131,7 @@
             <span class="tag">DocumentDB</span>
             <span class="tag">Snowflake</span>
             <span class="tag">Amazon S3</span>
+            <span class="tag">Apache Iceberg</span>
           </div>
         </div>
 
@@ -291,6 +292,32 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
+          <h3 class="project-title">Enterprise Data Lake Platform</h3>
+          <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection — Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI-powered root cause analysis system using Amazon Bedrock that automatically processes pipeline failure tickets, backed by a 95,000+ character domain knowledge base — reducing mean time to resolution at under $25/month. Automated metadata management for 99+ data assets via Amazon DataZone integration, cutting update time by 70%.</p>
+          <div class="project-tags">
+            <span class="tag small">Python</span>
+            <span class="tag small">PySpark</span>
+            <span class="tag small">AWS Glue</span>
+            <span class="tag small">EMR Serverless</span>
+            <span class="tag small">Lambda</span>
+            <span class="tag small">S3</span>
+            <span class="tag small">Athena</span>
+            <span class="tag small">Apache Iceberg</span>
+            <span class="tag small">Apache Airflow</span>
+            <span class="tag small">Amazon Bedrock</span>
+            <span class="tag small">DynamoDB</span>
+            <span class="tag small">Amazon DataZone</span>
+            <span class="tag small">Lake Formation</span>
+            <span class="tag small">CloudFormation</span>
+            <span class="tag small">SNS / SQS</span>
+            <span class="tag small">CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-icon">&#9670;</span>
+          </div>
           <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
           <p class="project-desc">Eliminated manual dataset onboarding for 6,000+ data tables. Reduced time from ~60 min/table to zero human intervention. Built an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore Runtime (Claude Sonnet 4) to auto-generate table descriptions, column metadata, and READMEs with PII guardrails. Step Functions Distributed Map orchestrates bulk registration, cross-account EventBridge detects schema drift in real time, and incremental AI re-enrichment runs only for new columns.</p>
           <div class="project-tags">
@@ -433,7 +460,7 @@
             <span class="edu-field">Information Technology</span>
           </div>
           <span class="edu-school">Ottawa University</span>
-          <span class="edu-date">Jun 2024 – Present</span>
+          <span class="edu-date">Jun 2024 – Jun 2026</span>
         </div>
 
         <div class="edu-card">
@@ -442,7 +469,7 @@
             <span class="edu-field">Computer Engineering</span>
           </div>
           <span class="edu-school">George Mason University, Volgenau School of Engineering</span>
-          <span class="edu-date">2019 – 2021 &nbsp;·&nbsp; GPA 3.9 / 4.0</span>
+          <span class="edu-date">2019 – 2021</span>
           <span class="edu-award">&#127942; Outstanding Academic Achievement Award</span>
         </div>
 
