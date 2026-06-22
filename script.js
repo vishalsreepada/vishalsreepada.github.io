@@ -23,3 +23,18 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 
 sections.forEach(s => observer.observe(s));
+
+// Read more toggle for project descriptions
+window.addEventListener('load', () => {
+  document.querySelectorAll('.project-desc').forEach(desc => {
+    if (desc.scrollHeight <= desc.clientHeight + 4) return;
+    const btn = document.createElement('button');
+    btn.className = 'read-more-btn';
+    btn.textContent = 'Read more';
+    desc.after(btn);
+    btn.addEventListener('click', () => {
+      desc.classList.toggle('expanded');
+      btn.textContent = desc.classList.contains('expanded') ? 'Show less' : 'Read more';
+    });
+  });
+});
