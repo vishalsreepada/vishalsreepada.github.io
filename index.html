@@ -63,8 +63,7 @@
       <div class="about-grid">
         <div class="about-text">
           <p>I'm a <strong>Lead Data Engineer at Amazon</strong> with 5+ years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
-          <p>I specialize in replacing manual, error-prone processes with automated data systems — from AI-powered metadata enrichment to event-driven pipeline monitoring that runs without human intervention.</p>
-          <p>I'm driven by the challenge of building data systems that are simple, reliable, and self-sustaining at scale.</p>
+          <p>I specialize in building automated data systems that eliminate operational toil, ranging from AI-powered metadata enrichment to event-driven pipeline monitoring at scale.</p>
         </div>
         <div class="about-stats">
           <div class="stat-card">
@@ -76,12 +75,12 @@
             <span class="stat-label">Pipelines Delivered</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number">600+</span>
-            <span class="stat-label">Users Served</span>
-          </div>
-          <div class="stat-card">
             <span class="stat-number">6K+</span>
             <span class="stat-label">Datasets Automated</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Incident Reduction</span>
           </div>
         </div>
       </div>
@@ -155,7 +154,8 @@
             <span class="tag">Amazon DataZone</span>
             <span class="tag">QuickSight</span>
             <span class="tag">EventBridge</span>
-            <span class="tag">SNS / SQS</span>
+            <span class="tag">SNS</span>
+            <span class="tag">SQS</span>
             <span class="tag">SES</span>
             <span class="tag">CloudFront</span>
             <span class="tag">API Gateway</span>
@@ -227,9 +227,9 @@
                 <span class="timeline-date">May 2024 – Present &nbsp;·&nbsp; Austin, TX</span>
                 <ul class="timeline-bullets">
                   <li>Owned and evolved the enterprise data lake platform across 63+ production workflows using a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection across Lambda, AWS Glue, and EMR Serverless. Integrated Apache Iceberg on high-concurrency datasets for ACID compliance and time travel.</li>
-                  <li>Architected and delivered an AI-powered data catalog service automating metadata registration and enrichment for 6,000+ datasets. Reduced onboarding from ~60 minutes per table to zero human intervention using Amazon Bedrock and Step Functions orchestration.</li>
-                  <li>Built an AI-powered pipeline failure analysis system using Amazon Bedrock, processing incident tickets automatically via an SNS → SQS → Lambda pipeline backed by a 95,000+ character domain knowledge base — cutting mean time to resolution at under $25/month operational cost.</li>
-                  <li>Designed a self-service conversational AI interface for enterprise data lake onboarding, featuring a custom 4-factor confidence scoring algorithm and smart routing that handles 60% of queries in &lt;10ms, targeting 200+ daily table onboardings.</li>
+                  <li>Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual onboarding process that took ~30 minutes per table. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs with automated data classification using specialized tools to read classification wikis and profile data directly.</li>
+                  <li>Built an AI agent with specialized tools and skills deployed on an internal AI agent platform that triggers on pipeline failure tickets, analyzes the root cause using domain knowledge, and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</li>
+                  <li>Built a self-service conversational AI interface hosted on CloudFront where users onboard new data sources into the enterprise data lake through conversation, reducing onboarding time from half a day to 30 minutes. Implemented on-demand configuration promotion to production, replacing a weekly deployment cycle. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions.</li>
                   <li>Led org-wide migration to a next-generation dataset platform, owning documentation and cross-team coordination to ensure zero-disruption adoption across the Engineering Plan &amp; Analytics organization.</li>
                 </ul>
               </div>
@@ -238,10 +238,10 @@
                 <p class="timeline-subrole-title">Data Engineer</p>
                 <span class="timeline-date">Apr 2022 – Apr 2024 &nbsp;·&nbsp; Seattle, WA</span>
                 <ul class="timeline-bullets">
-                  <li>Cut a 1TB executive reporting pipeline runtime from 40 hours to 30 minutes (98% reduction) by identifying only 10GB was required for reporting, then implementing cross-account S3 crawlers with SparkSQL partition pruning.</li>
-                  <li>Led consolidation of 5 legacy project management tools into a single unified data platform serving 600+ users across Europe. Owned schema mapping for 50+ tables, backfill scripting, and coordinated a planned single-day production cutover with zero data loss.</li>
-                  <li>Built an event-driven warehouse safety monitoring system (Lambda + CDK) that automated ticket creation for collision-avoidance sensor failures, eliminating ~200 daily manual interventions and contributing to a 95% reduction in serious industrial incidents across sites with 800+ operators.</li>
-                  <li>Engineered multi-vendor fleet telemetry pipelines extracting from 40+ API endpoints, executed a 2-year historical backfill into the enterprise data lake, and replaced a legacy Redshift cluster with a lake-native workflow for faster processing.</li>
+                  <li>Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours by identifying only 10GB was needed for reporting. Redesigned with cross-account S3 crawlers and SparkSQL partition pruning, cutting runtime from 40 hours to 30 minutes and unblocking weekly executive reporting that multiple business units depended on.</li>
+                  <li>Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies.</li>
+                  <li>Built an event-driven ticket routing system using Lambda and AWS CDK that automatically parses warehouse PIT sensor failure notifications, creates tickets, routes them to the responsible team, consolidates multiple failures for the same device, and auto-resolves transient failures when devices recover, eliminating ~200 daily manual email reviews.</li>
+                  <li>Engineered data extraction pipelines to ingest fleet telemetry from multiple PIT vendors (Raymond and Hyster) across US and European fulfillment centers, pulling from 40+ paginated API endpoints. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow.</li>
                   <li>Owned end-to-end security certification to enable Confidential-classified data processing in the enterprise data lake. Authored architecture documentation, threat mitigations, and worked cross-organizationally to achieve clearance.</li>
                 </ul>
               </div>
@@ -305,7 +305,7 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">Enterprise Data Lake Platform</h3>
-          <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection — Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI-powered root cause analysis system using Amazon Bedrock that automatically processes pipeline failure tickets, backed by a 95,000+ character domain knowledge base — reducing mean time to resolution at under $25/month. Automated metadata management for 99+ data assets via Amazon DataZone integration, cutting update time by 70%.</p>
+          <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection: Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI agent with specialized tools and skills, deployed on Bedrock AgentCore, that automatically triggers when a pipeline failure ticket is created. The agent analyzes the root cause using its domain knowledge and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</p>
           <div class="project-tags">
             <span class="tag small">Python</span>
             <span class="tag small">PySpark</span>
@@ -324,7 +324,7 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
-          <p class="project-desc">Eliminated manual dataset onboarding for 6,000+ data tables. Reduced time from ~60 min/table to zero human intervention. Built an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore Runtime (Claude Sonnet 4) to auto-generate table descriptions, column metadata, and READMEs with PII guardrails. Step Functions Distributed Map orchestrates bulk registration, cross-account EventBridge detects schema drift in real time, and incremental AI re-enrichment runs only for new columns.</p>
+          <p class="project-desc">Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual one-by-one onboarding process that took ~30 minutes per table. Users select datasets from a dropdown of available data lake tables through a self-service UI and submit for bulk registration. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs. The agent uses specialized tools to read classification wikis and profile data by querying it directly, enabling automated data classification during enrichment. Built a schema drift detector that auto-detects metadata changes and triggers incremental re-enrichment, updating only affected columns rather than reprocessing entire datasets.</p>
           <div class="project-tags">
             <span class="tag small">Amazon Bedrock</span>
             <span class="tag small">Bedrock AgentCore</span>
@@ -337,7 +337,8 @@
             <span class="tag small">S3</span>
             <span class="tag small">Athena</span>
             <span class="tag small">Lake Formation</span>
-            <span class="tag small">SNS / SQS</span>
+            <span class="tag small">SNS</span>
+            <span class="tag small">SQS</span>
             <span class="tag small">AWS CDK</span>
             <span class="tag small">CloudWatch</span>
           </div>
@@ -347,17 +348,21 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">Executive Reporting Pipeline: 98% Runtime Reduction</h3>
-          <p class="project-desc">Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours. Root cause: only 10GB of data was needed for reporting. Redesigned the pipeline with cross-account S3 crawlers, SparkSQL partition pruning, and targeted data filtering at the transform stage. Cut runtime to 30 minutes and unblocked leadership reporting workflows.</p>
+          <h3 class="project-title">AI-Powered Data Lake Onboarding</h3>
+          <p class="project-desc">Built a self-service conversational AI interface hosted on CloudFront where users chat with an agent deployed on an internal AI agent platform to onboard new data sources into the enterprise data lake. The agent collects source type, connection parameters, and table details through conversation, then validates all required permissions before proceeding, reducing onboarding time from half a day to 30 minutes. Validated configurations are stored in dev DynamoDB and a dev pipeline is triggered automatically. On successful dev run, a developer can selectively promote configurations to production on-demand, replacing a weekly deployment cycle. Production DynamoDB serves as the input parameter store for the full data lake pipeline across landing, raw, and transform layers. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions and tool calls.</p>
           <div class="project-tags">
-            <span class="tag small">AWS Glue</span>
-            <span class="tag small">S3 Cross-Account</span>
             <span class="tag small">Lambda</span>
+            <span class="tag small">DynamoDB</span>
+            <span class="tag small">Step Functions</span>
+            <span class="tag small">API Gateway</span>
+            <span class="tag small">CloudFront</span>
+            <span class="tag small">S3</span>
             <span class="tag small">Athena</span>
-            <span class="tag small">QuickSight</span>
             <span class="tag small">Apache Airflow</span>
+            <span class="tag small">SNS</span>
             <span class="tag small">SES</span>
-            <span class="tag small">CloudFormation</span>
+            <span class="tag small">CloudWatch</span>
+            <span class="tag small">Langfuse</span>
           </div>
         </div>
 
@@ -366,7 +371,7 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">PMO Data Platform Consolidation</h3>
-          <p class="project-desc">Decommissioned 5 legacy project management tools and migrated 600+ Europe-PMO users to a single unified data platform in a planned one-day cutover. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, engineered retrofit pipelines for downstream tool dependencies, and built a DocumentDB-backed risk module with hourly S3 flattening for real-time visibility.</p>
+          <p class="project-desc">Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies. Migrated risk data from legacy systems into DocumentDB and implemented hourly S3 flattening for downstream consumption.</p>
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">Step Functions</span>
@@ -383,11 +388,12 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">Warehouse Safety Monitoring Automation</h3>
-          <p class="project-desc">Replaced a fully manual process (~200 daily anchor failure notifications) with an event-driven ticketing system using Lambda and AWS CDK. Tickets are created within seconds of collision-avoidance sensor failures and deduplicated on repeats. Eliminated manual overhead and contributed to a 95% reduction in serious powered industrial truck incidents across facilities with 800+ operators.</p>
+          <p class="project-desc">Replaced manual email-based failure notifications for warehouse collision-avoidance sensors with an event-driven ticket routing system. Built with Lambda and AWS CDK, the system automatically parses failure notifications, creates tickets, and routes them to the responsible team. Multiple failures for the same device consolidate into a single ticket, and transient failures are auto-resolved when devices recover, ensuring teams focus only on persistent issues rather than noise. Eliminated ~200 daily manual email reviews across facilities with 800+ operators.</p>
           <div class="project-tags">
             <span class="tag small">Lambda</span>
             <span class="tag small">AWS CDK</span>
-            <span class="tag small">SNS / SQS</span>
+            <span class="tag small">SNS</span>
+            <span class="tag small">SQS</span>
             <span class="tag small">SES</span>
             <span class="tag small">CodePipeline</span>
           </div>
@@ -397,32 +403,8 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <h3 class="project-title">AI-Powered Data Lake Onboarding</h3>
-          <p class="project-desc">Designed a conversational AI interface to automate table onboarding into the enterprise data lake. Architected a 4-factor confidence scoring algorithm (explicit mentions, field completeness, ambiguity penalty, context clarity) with smart routing that handles 60% of queries in &lt;10ms using Bedrock AgentCore. DynamoDB Streams trigger Lambda orchestration for automated S3 directory creation, Glue catalog setup, and Athena table provisioning. Dynamic Airflow DAG builder generates pipeline tasks at runtime for each onboarded table.</p>
-          <div class="project-tags">
-            <span class="tag small">Amazon Bedrock</span>
-            <span class="tag small">Bedrock AgentCore</span>
-            <span class="tag small">Lambda</span>
-            <span class="tag small">DynamoDB Streams</span>
-            <span class="tag small">Step Functions</span>
-            <span class="tag small">API Gateway</span>
-            <span class="tag small">CloudFront</span>
-            <span class="tag small">S3</span>
-            <span class="tag small">Glue Catalog</span>
-            <span class="tag small">Athena</span>
-            <span class="tag small">Apache Airflow</span>
-            <span class="tag small">SNS</span>
-            <span class="tag small">SES</span>
-            <span class="tag small">CloudWatch</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-icon">&#9670;</span>
-          </div>
           <h3 class="project-title">Multi-Vendor Fleet Telemetry Pipelines</h3>
-          <p class="project-desc">Engineered data extraction pipelines for fleet vehicle telemetry across three vendor sources (Raymond EU, Raymond NA, Hyster NA), pulling from 40+ paginated API endpoints with varying retention periods of 1 to 5 days. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow for faster processing. Pipeline template reused across multiple vendor integrations.</p>
+          <p class="project-desc">Engineered data extraction pipelines to ingest fleet telemetry from multiple PIT vendors (Raymond and Hyster) operating across US and European fulfillment centers, pulling from 40+ paginated API endpoints with varying data retention windows of 1 to 5 days. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow. Pipeline template was reused across multiple vendor integrations, reducing onboarding time for new vendors.</p>
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">S3</span>
@@ -439,12 +421,30 @@
             <span class="project-icon">&#9670;</span>
           </div>
           <h3 class="project-title">Construction Management Data Pipeline</h3>
-          <p class="project-desc">Built dual-source pipelines to support a phased migration from legacy Excel macros to a modern web application for construction project management — covering purchase orders, change orders, weather logs, and cost summaries. Reverse-engineered VBA macro logic, retrofitted 15 tables with complex multi-dataset joins, and handled sequential update dependencies to maintain data integrity. Pipeline template was adopted by two additional regional teams.</p>
+          <p class="project-desc">Built dual-source pipelines to support a phased migration from legacy Excel macros to a modern web application for construction project management, covering purchase orders, change orders, weather logs, and cost summaries. Reverse-engineered VBA macro logic, retrofitted 15 tables with complex multi-dataset joins, and handled sequential update dependencies to maintain data integrity. Pipeline template was adopted by two additional regional teams.</p>
           <div class="project-tags">
             <span class="tag small">AWS Glue</span>
             <span class="tag small">Aurora MySQL</span>
             <span class="tag small">S3</span>
             <span class="tag small">Apache Airflow</span>
+            <span class="tag small">CloudFormation</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-icon">&#9670;</span>
+          </div>
+          <h3 class="project-title">Executive Reporting Pipeline: 98% Runtime Reduction</h3>
+          <p class="project-desc">Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours. Root cause: only 10GB of data was needed for reporting. Redesigned the pipeline with cross-account S3 crawlers, SparkSQL partition pruning, and targeted data filtering at the transform stage, cutting runtime from 40 hours to 30 minutes. Unblocked weekly executive reporting that multiple business units depended on.</p>
+          <div class="project-tags">
+            <span class="tag small">AWS Glue</span>
+            <span class="tag small">S3 Cross-Account</span>
+            <span class="tag small">Lambda</span>
+            <span class="tag small">Athena</span>
+            <span class="tag small">QuickSight</span>
+            <span class="tag small">Apache Airflow</span>
+            <span class="tag small">SES</span>
             <span class="tag small">CloudFormation</span>
           </div>
         </div>
