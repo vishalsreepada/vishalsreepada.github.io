@@ -301,10 +301,9 @@
       <h2 class="section-title" data-aos="fade-right">Projects</h2>
       <div class="projects-grid">
 
-        <div class="project-card cat-platform" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-platform">Platform</span>
           </div>
           <h3 class="project-title">Enterprise Data Lake Platform</h3>
           <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection: Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI agent with specialized tools and skills, deployed on Bedrock AgentCore, that automatically triggers when a pipeline failure ticket is created. The agent analyzes the root cause using its domain knowledge and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</p>
@@ -321,10 +320,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-ai" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-ai">AI</span>
           </div>
           <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
           <p class="project-desc">Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual one-by-one onboarding process that took ~30 minutes per table. Users select datasets from a dropdown of available data lake tables through a self-service UI and submit for bulk registration. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs. The agent uses specialized tools to read classification wikis and profile data by querying it directly, enabling automated data classification during enrichment. Built a schema drift detector that auto-detects metadata changes and triggers incremental re-enrichment, updating only affected columns rather than reprocessing entire datasets.</p>
@@ -347,10 +345,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-ai" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-ai">AI</span>
           </div>
           <h3 class="project-title">AI-Powered Data Lake Onboarding</h3>
           <p class="project-desc">Built a self-service conversational AI interface hosted on CloudFront where users chat with an agent deployed on an internal AI agent platform to onboard new data sources into the enterprise data lake. The agent collects source type, connection parameters, and table details through conversation, then validates all required permissions before proceeding, reducing onboarding time from half a day to 30 minutes. Validated configurations are stored in dev DynamoDB and a dev pipeline is triggered automatically. On successful dev run, a developer can selectively promote configurations to production on-demand, replacing a weekly deployment cycle. Production DynamoDB serves as the input parameter store for the full data lake pipeline across landing, raw, and transform layers. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions and tool calls.</p>
@@ -370,10 +367,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-migration" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-migration">Migration</span>
           </div>
           <h3 class="project-title">PMO Data Platform Consolidation</h3>
           <p class="project-desc">Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies. Migrated risk data from legacy systems into DocumentDB and implemented hourly S3 flattening for downstream consumption.</p>
@@ -388,10 +384,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-automation" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-automation">Automation</span>
           </div>
           <h3 class="project-title">Warehouse Safety Monitoring Automation</h3>
           <p class="project-desc">Replaced manual email-based failure notifications for warehouse collision-avoidance sensors with an event-driven ticket routing system. Built with Lambda and AWS CDK, the system automatically parses failure notifications, creates tickets, and routes them to the responsible team. Multiple failures for the same device consolidate into a single ticket, and transient failures are auto-resolved when devices recover, ensuring teams focus only on persistent issues rather than noise. Eliminated ~200 daily manual email reviews across facilities with 800+ operators.</p>
@@ -405,10 +400,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-pipeline" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-pipeline">Data Pipeline</span>
           </div>
           <h3 class="project-title">Multi-Vendor Fleet Telemetry Pipelines</h3>
           <p class="project-desc">Engineered data extraction pipelines to ingest fleet telemetry from multiple PIT vendors (Raymond and Hyster) operating across US and European fulfillment centers, pulling from 40+ paginated API endpoints with varying data retention windows of 1 to 5 days. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow. Pipeline template was reused across multiple vendor integrations, reducing onboarding time for new vendors.</p>
@@ -423,10 +417,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-pipeline" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-pipeline">Data Pipeline</span>
           </div>
           <h3 class="project-title">Construction Management Data Pipeline</h3>
           <p class="project-desc">Built dual-source pipelines to support a phased migration from legacy Excel macros to a modern web application for construction project management, covering purchase orders, change orders, weather logs, and cost summaries. Reverse-engineered VBA macro logic, retrofitted 15 tables with complex multi-dataset joins, and handled sequential update dependencies to maintain data integrity. Pipeline template was adopted by two additional regional teams.</p>
@@ -439,10 +432,9 @@
           </div>
         </div>
 
-        <div class="project-card cat-optimization" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
-            <span class="project-category cat-optimization">Optimization</span>
           </div>
           <h3 class="project-title">Executive Reporting Pipeline: 98% Runtime Reduction</h3>
           <p class="project-desc">Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours. Root cause: only 10GB of data was needed for reporting. Redesigned the pipeline with cross-account S3 crawlers, SparkSQL partition pruning, and targeted data filtering at the transform stage, cutting runtime from 40 hours to 30 minutes. Unblocked weekly executive reporting that multiple business units depended on.</p>

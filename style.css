@@ -536,30 +536,6 @@ section { padding: 100px 2rem; }
   padding-top: 0.25rem;
 }
 
-/* ===================== PROJECT CATEGORY BADGES & BORDERS ===================== */
-.project-category {
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-}
-
-.cat-ai           { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.35); }
-.cat-platform     { background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.35); }
-.cat-migration    { background: rgba(8,145,178,0.15);  color: #22d3ee; border: 1px solid rgba(8,145,178,0.35); }
-.cat-automation   { background: rgba(217,119,6,0.15);  color: #fbbf24; border: 1px solid rgba(217,119,6,0.35); }
-.cat-pipeline     { background: rgba(5,150,105,0.15);  color: #34d399; border: 1px solid rgba(5,150,105,0.35); }
-.cat-optimization { background: rgba(220,38,38,0.15);  color: #f87171; border: 1px solid rgba(220,38,38,0.35); }
-
-.project-card.cat-ai           { border-left: 3px solid #7c3aed; }
-.project-card.cat-platform     { border-left: 3px solid #0ea5e9; }
-.project-card.cat-migration    { border-left: 3px solid #0891b2; }
-.project-card.cat-automation   { border-left: 3px solid #d97706; }
-.project-card.cat-pipeline     { border-left: 3px solid #059669; }
-.project-card.cat-optimization { border-left: 3px solid #dc2626; }
-
 /* ===================== PROJECTS ===================== */
 .projects-grid {
   display: grid;
