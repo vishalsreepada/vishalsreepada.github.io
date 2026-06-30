@@ -582,11 +582,16 @@ section { padding: 100px 2rem; }
 
 .project-card-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 
-.project-icon { font-size: 1.5rem; color: var(--accent); }
+.project-icon {
+  font-size: 0.8rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
 
 .icon-link {
   color: var(--text-muted);
