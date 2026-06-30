@@ -41,21 +41,23 @@ const themeToggle = document.getElementById('theme-toggle');
 const saved = localStorage.getItem('theme');
 if (saved === 'light') {
   document.body.classList.add('light');
+  themeToggle.textContent = '☀';
+} else {
   themeToggle.textContent = '☽';
 }
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light');
   const isLight = document.body.classList.contains('light');
-  themeToggle.textContent = isLight ? '☽' : '☀';
+  themeToggle.textContent = isLight ? '☀' : '☽';
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
-// Shrink navbar on scroll
+// Darken pill nav on scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.style.background = window.scrollY > 50
-    ? 'rgba(10, 14, 23, 0.97)'
-    : 'rgba(10, 14, 23, 0.85)';
+    ? 'rgba(15, 12, 22, 0.95)'
+    : 'rgba(15, 12, 22, 0.82)';
 });
 
 // Highlight active nav link based on scroll position
