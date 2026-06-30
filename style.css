@@ -533,18 +533,20 @@ section { padding: 100px 2rem; }
 
 .timeline-subrole {
   position: relative;
+  z-index: 1;
 }
 
 .timeline-subrole::before {
   content: '';
   position: absolute;
-  left: -1.4rem;
-  top: 7px;
-  width: 8px;
-  height: 8px;
+  left: -1.45rem;
+  top: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--bg-card2);
-  border: 1.5px solid var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg-card);
+  z-index: 1;
 }
 
 .timeline-subrole-title {
