@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -225,9 +225,9 @@
 
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Data Engineer II</p>
-                <span class="timeline-date">May 2024 – Present &nbsp;·&nbsp; Austin, TX</span>
+                <span class="timeline-date">May 2024 â€“ Present &nbsp;Â·&nbsp; Austin, TX</span>
                 <ul class="timeline-bullets">
-                  <li>Owned and evolved the enterprise data lake platform across 63+ production workflows using a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection across Lambda, AWS Glue, and EMR Serverless. Integrated Apache Iceberg on high-concurrency datasets for ACID compliance and time travel.</li>
+                  <li>Owned and evolved the enterprise data lake platform across 63+ production workflows using a 4-layer medallion architecture (Landing â†’ Raw â†’ Transform â†’ Refine) with intelligent compute selection across Lambda, AWS Glue, and EMR Serverless. Integrated Apache Iceberg on high-concurrency datasets for ACID compliance and time travel.</li>
                   <li>Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual onboarding process that took ~30 minutes per table. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs with automated data classification using specialized tools to read classification wikis and profile data directly.</li>
                   <li>Built an AI agent with specialized tools and skills deployed on an internal AI agent platform that triggers on pipeline failure tickets, analyzes the root cause using domain knowledge, and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</li>
                   <li>Built a self-service conversational AI interface hosted on CloudFront where users onboard new data sources into the enterprise data lake through conversation, reducing onboarding time from half a day to 30 minutes. Implemented on-demand configuration promotion to production, replacing a weekly deployment cycle. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions.</li>
@@ -237,7 +237,7 @@
 
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Data Engineer</p>
-                <span class="timeline-date">Apr 2022 – Apr 2024 &nbsp;·&nbsp; Seattle, WA</span>
+                <span class="timeline-date">Apr 2022 â€“ Apr 2024 &nbsp;Â·&nbsp; Seattle, WA</span>
                 <ul class="timeline-bullets">
                   <li>Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours by identifying only 10GB was needed for reporting. Redesigned with cross-account S3 crawlers and SparkSQL partition pruning, cutting runtime from 40 hours to 30 minutes and unblocking weekly executive reporting that multiple business units depended on.</li>
                   <li>Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies.</li>
@@ -260,7 +260,7 @@
             <div class="timeline-subroles">
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Associate Data Engineer</p>
-                <span class="timeline-date">Jun 2021 – Apr 2022 &nbsp;·&nbsp; Greater Chicago Area</span>
+                <span class="timeline-date">Jun 2021 â€“ Apr 2022 &nbsp;Â·&nbsp; Greater Chicago Area</span>
                 <ul class="timeline-bullets">
               <li>Built PySpark data pipelines in Azure Databricks for ETL from diverse file formats to Azure Data Lake Storage and Amazon S3, providing insights into customer usage patterns.</li>
               <li>Developed and deployed AWS Lambda functions for data extraction, parsing, and ingestion of nested JSON from S3 into Snowflake.</li>
@@ -281,7 +281,7 @@
             <div class="timeline-subroles">
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Graduate Teaching Assistant</p>
-                <span class="timeline-date">Jan 2020 – May 2021 &nbsp;·&nbsp; Fairfax, VA</span>
+                <span class="timeline-date">Jan 2020 â€“ May 2021 &nbsp;Â·&nbsp; Fairfax, VA</span>
                 <ul class="timeline-bullets">
               <li>Assisted in Computer Science and IST departments across courses including Big Data Technologies, Network Security, Security Accreditation of Information Systems, and Essentials of Computer Science.</li>
               <li>Held weekly office hours, graded assignments, and developed curriculum materials in collaboration with faculty.</li>
@@ -305,9 +305,9 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">01</span>
+
           <h3 class="project-title">Enterprise Data Lake Platform</h3>
-          <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing → Raw → Transform → Refine) with intelligent compute selection: Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI agent with specialized tools and skills, deployed on Bedrock AgentCore, that automatically triggers when a pipeline failure ticket is created. The agent analyzes the root cause using its domain knowledge and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</p>
+          <p class="project-desc">Architected and built the core data lake platform powering analytics across multiple business domains. Implemented a 4-layer medallion architecture (Landing â†’ Raw â†’ Transform â†’ Refine) with intelligent compute selection: Lambda for lightweight jobs, AWS Glue for distributed transforms, and EMR Serverless for high-volume processing. Applied Apache Iceberg on fleet telemetry and UAT comparison datasets in the transform layer for ACID compliance and time travel capabilities. Built an AI agent with specialized tools and skills, deployed on Bedrock AgentCore, that automatically triggers when a pipeline failure ticket is created. The agent analyzes the root cause using its domain knowledge and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</p>
           <div class="project-tags">
             <span class="tag small">Python</span>
             <span class="tag small">PySpark</span>
@@ -325,7 +325,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">02</span>
+
           <h3 class="project-title">AI-Powered Data Catalog Automation</h3>
           <p class="project-desc">Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual one-by-one onboarding process that took ~30 minutes per table. Users select datasets from a dropdown of available data lake tables through a self-service UI and submit for bulk registration. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs. The agent uses specialized tools to read classification wikis and profile data by querying it directly, enabling automated data classification during enrichment. Built a schema drift detector that auto-detects metadata changes and triggers incremental re-enrichment, updating only affected columns rather than reprocessing entire datasets.</p>
           <div class="project-tags">
@@ -351,7 +351,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">03</span>
+
           <h3 class="project-title">AI-Powered Data Lake Onboarding</h3>
           <p class="project-desc">Built a self-service conversational AI interface hosted on CloudFront where users chat with an agent deployed on an internal AI agent platform to onboard new data sources into the enterprise data lake. The agent collects source type, connection parameters, and table details through conversation, then validates all required permissions before proceeding, reducing onboarding time from half a day to 30 minutes. Validated configurations are stored in dev DynamoDB and a dev pipeline is triggered automatically. On successful dev run, a developer can selectively promote configurations to production on-demand, replacing a weekly deployment cycle. Production DynamoDB serves as the input parameter store for the full data lake pipeline across landing, raw, and transform layers. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions and tool calls.</p>
           <div class="project-tags">
@@ -374,7 +374,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">04</span>
+
           <h3 class="project-title">PMO Data Platform Consolidation</h3>
           <p class="project-desc">Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies. Migrated risk data from legacy systems into DocumentDB and implemented hourly S3 flattening for downstream consumption.</p>
           <div class="project-tags">
@@ -392,7 +392,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">05</span>
+
           <h3 class="project-title">Warehouse Safety Monitoring Automation</h3>
           <p class="project-desc">Replaced manual email-based failure notifications for warehouse collision-avoidance sensors with an event-driven ticket routing system. Built with Lambda and AWS CDK, the system automatically parses failure notifications, creates tickets, and routes them to the responsible team. Multiple failures for the same device consolidate into a single ticket, and transient failures are auto-resolved when devices recover, ensuring teams focus only on persistent issues rather than noise. Eliminated ~200 daily manual email reviews across facilities with 800+ operators.</p>
           <div class="project-tags">
@@ -409,7 +409,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">06</span>
+
           <h3 class="project-title">Multi-Vendor Fleet Telemetry Pipelines</h3>
           <p class="project-desc">Engineered data extraction pipelines to ingest fleet telemetry from multiple PIT vendors (Raymond and Hyster) operating across US and European fulfillment centers, pulling from 40+ paginated API endpoints with varying data retention windows of 1 to 5 days. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow. Pipeline template was reused across multiple vendor integrations, reducing onboarding time for new vendors.</p>
           <div class="project-tags">
@@ -427,7 +427,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">07</span>
+
           <h3 class="project-title">Construction Management Data Pipeline</h3>
           <p class="project-desc">Built dual-source pipelines to support a phased migration from legacy Excel macros to a modern web application for construction project management, covering purchase orders, change orders, weather logs, and cost summaries. Reverse-engineered VBA macro logic, retrofitted 15 tables with complex multi-dataset joins, and handled sequential update dependencies to maintain data integrity. Pipeline template was adopted by two additional regional teams.</p>
           <div class="project-tags">
@@ -443,7 +443,7 @@
           <div class="project-card-header">
             <span class="project-icon">&#9670;</span>
           </div>
-          <span class="project-num">08</span>
+
           <h3 class="project-title">Executive Reporting Pipeline: 98% Runtime Reduction</h3>
           <p class="project-desc">Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours. Root cause: only 10GB of data was needed for reporting. Redesigned the pipeline with cross-account S3 crawlers, SparkSQL partition pruning, and targeted data filtering at the transform stage, cutting runtime from 40 hours to 30 minutes. Unblocked weekly executive reporting that multiple business units depended on.</p>
           <div class="project-tags">
@@ -474,7 +474,7 @@
             <span class="edu-field">Information Technology</span>
           </div>
           <span class="edu-school">Ottawa University</span>
-          <span class="edu-date">2024 – 2026</span>
+          <span class="edu-date">2024 â€“ 2026</span>
         </div>
 
         <div class="edu-card" data-aos="fade-up" data-aos-delay="150">
@@ -483,7 +483,7 @@
             <span class="edu-field">Computer Engineering</span>
           </div>
           <span class="edu-school">George Mason University, Volgenau School of Engineering</span>
-          <span class="edu-date">2019 – 2021</span>
+          <span class="edu-date">2019 â€“ 2021</span>
           <span class="edu-award">&#127942; Outstanding Academic Achievement Award</span>
         </div>
 
@@ -493,7 +493,7 @@
             <span class="edu-field">Electronics &amp; Communication Engineering</span>
           </div>
           <span class="edu-school">Osmania University, Hyderabad, India</span>
-          <span class="edu-date">2015 – 2019</span>
+          <span class="edu-date">2015 â€“ 2019</span>
         </div>
 
       </div>
@@ -513,7 +513,7 @@
   </section>
 
   <!-- THEME TOGGLE -->
-  <button id="theme-toggle" aria-label="Toggle theme">☀</button>
+  <button id="theme-toggle" aria-label="Toggle theme">â˜€</button>
 
   <!-- FOOTER -->
   <footer>
