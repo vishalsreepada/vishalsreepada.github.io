@@ -527,25 +527,23 @@ section { padding: 100px 2rem; }
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-left: 1rem;
-  border-left: 1px solid var(--border);
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--border);
 }
 
 .timeline-subrole {
   position: relative;
-  z-index: 1;
 }
 
 .timeline-subrole::before {
   content: '';
   position: absolute;
-  left: -1.45rem;
-  top: 8px;
+  left: calc(-1.25rem - 6px);
+  top: 7px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 3px var(--bg-card);
   z-index: 1;
 }
 
