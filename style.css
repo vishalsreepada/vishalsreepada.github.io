@@ -827,11 +827,20 @@ body.light .hero-name {
 body.light .code-block,
 body.light .code-header {
   background: #1e2938;
-  border-color: rgba(0, 212, 255, 0.2);
+  border-color: rgba(96, 165, 250, 0.2);
 }
 
 body.light .code-header {
+  background: #18222f;
   border-bottom-color: #2d3f55;
+}
+
+body.light .code-body {
+  color: #ccd6f6;
+}
+
+body.light .code-title {
+  color: #7a8fa6;
 }
 
 /* ===================== FOOTER ===================== */
