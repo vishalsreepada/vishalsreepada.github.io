@@ -429,6 +429,7 @@ section { padding: 100px 2rem; }
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 
 .timeline-dot {
@@ -438,8 +439,8 @@ section { padding: 100px 2rem; }
   width: 12px; height: 12px;
   border-radius: 50%;
   background: var(--accent);
-  border: 3px solid var(--bg);
-  z-index: 1;
+  box-shadow: 0 0 0 3px var(--bg-card);
+  z-index: 2;
   animation: dotPulse 2.2s ease-in-out infinite;
 }
 
