@@ -1,3 +1,11 @@
+// Init scroll animations
+AOS.init({
+  duration: 700,
+  easing: 'ease-out-cubic',
+  once: true,
+  offset: 80,
+});
+
 // Shrink navbar on scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
