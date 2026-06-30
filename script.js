@@ -50,14 +50,22 @@ themeToggle.addEventListener('click', () => {
   const isLight = document.body.classList.contains('light');
   themeToggle.textContent = isLight ? '☀' : '☽';
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  navbar.style.background = isLight ? 'rgba(240, 244, 248, 0.88)' : 'rgba(15, 12, 22, 0.82)';
 });
 
 // Darken pill nav on scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.style.background = window.scrollY > 50
-    ? 'rgba(15, 12, 22, 0.95)'
-    : 'rgba(15, 12, 22, 0.82)';
+  const isLight = document.body.classList.contains('light');
+  if (isLight) {
+    navbar.style.background = window.scrollY > 50
+      ? 'rgba(240, 244, 248, 0.97)'
+      : 'rgba(240, 244, 248, 0.88)';
+  } else {
+    navbar.style.background = window.scrollY > 50
+      ? 'rgba(15, 12, 22, 0.95)'
+      : 'rgba(15, 12, 22, 0.82)';
+  }
 });
 
 // Highlight active nav link based on scroll position
