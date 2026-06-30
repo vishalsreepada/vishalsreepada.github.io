@@ -183,6 +183,23 @@ section { padding: 100px 2rem; }
 
 .hero-content { flex: 1; }
 
+.hero-photo-wrapper {
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.05s;
+  opacity: 0;
+}
+
+.hero-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid rgba(96, 165, 250, 0.5);
+  box-shadow: 0 0 0 5px rgba(96, 165, 250, 0.1);
+}
+
 .hero-greeting {
   font-family: var(--mono);
   font-size: 1rem;
