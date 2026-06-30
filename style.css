@@ -528,7 +528,6 @@ section { padding: 100px 2rem; }
   flex-direction: column;
   gap: 1.5rem;
   padding-left: 1.25rem;
-  border-left: 2px solid var(--border);
 }
 
 .timeline-subrole {
@@ -538,13 +537,12 @@ section { padding: 100px 2rem; }
 .timeline-subrole::before {
   content: '';
   position: absolute;
-  left: calc(-1.25rem - 6px);
-  top: 7px;
+  left: calc(-1.25rem - 5px);
+  top: 10px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  z-index: 1;
 }
 
 .timeline-subrole-title {
