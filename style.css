@@ -900,9 +900,53 @@ footer {
   .edu-grid { grid-template-columns: 1fr; }
 }
 
+#nav-toggle { display: none; }
+
 @media (max-width: 600px) {
-  #navbar { min-width: unset; width: calc(100% - 2rem); border-radius: 16px; }
-  .nav-links { display: none; }
+  #navbar {
+    min-width: unset;
+    width: calc(100% - 2rem);
+    border-radius: 16px;
+    height: auto;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    padding: 0.75rem 1.25rem;
+    min-height: 52px;
+    align-items: center;
+  }
+
+  #nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 0.25rem;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+
   .skills-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: repeat(2, 1fr); }
   .certs-grid { grid-template-columns: 1fr; }

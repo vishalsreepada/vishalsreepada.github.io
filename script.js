@@ -68,6 +68,18 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Mobile hamburger menu
+const navToggle = document.getElementById('nav-toggle');
+const navLinksList = document.querySelector('.nav-links');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navLinksList.classList.toggle('open');
+  });
+  navLinksList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinksList.classList.remove('open'));
+  });
+}
+
 // Highlight active nav link based on scroll position
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
