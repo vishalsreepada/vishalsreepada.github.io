@@ -72,11 +72,22 @@ window.addEventListener('scroll', () => {
 const navToggle = document.getElementById('nav-toggle');
 const navLinksList = document.querySelector('.nav-links');
 if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    navLinksList.classList.toggle('open');
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinksList.classList.toggle('open');
+    navToggle.textContent = isOpen ? '✕' : '☰';
   });
   navLinksList.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinksList.classList.remove('open'));
+    link.addEventListener('click', () => {
+      navLinksList.classList.remove('open');
+      navToggle.textContent = '☰';
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target)) {
+      navLinksList.classList.remove('open');
+      navToggle.textContent = '☰';
+    }
   });
 }
 
