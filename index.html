@@ -74,7 +74,7 @@
       <h2 class="section-title" data-aos="fade-right">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p data-aos="fade-up" data-aos-delay="100">I'm a <strong>Lead Data Engineer at Amazon</strong> with 5+ years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
+          <p data-aos="fade-up" data-aos-delay="100">I'm a <strong>Data Engineer II at Amazon</strong> with 5+ years of experience designing and owning large-scale data infrastructure. I build end-to-end pipelines, event-driven architectures, and AI-powered automation systems that serve thousands of stakeholders across global operations.</p>
           <p data-aos="fade-up" data-aos-delay="200">I specialize in building automated data systems that eliminate operational toil, ranging from AI-powered metadata enrichment to event-driven pipeline monitoring at scale.</p>
         </div>
         <div class="about-stats">
@@ -123,7 +123,7 @@
                   <li>Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual onboarding process that took ~30 minutes per table. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs with automated data classification using specialized tools to read classification wikis and profile data directly.</li>
                   <li>Built an AI agent with specialized tools and skills deployed on an internal AI agent platform that triggers on pipeline failure tickets, analyzes the root cause using domain knowledge, and posts a detailed analysis comment directly on the ticket, reducing mean time to resolution from 4-5 days to 1-2 days.</li>
                   <li>Built a self-service conversational AI interface hosted on CloudFront where users onboard new data sources into the enterprise data lake through conversation, reducing onboarding time from half a day to 30 minutes. Implemented on-demand configuration promotion to production, replacing a weekly deployment cycle. Instrumented with OTLP observability via Langfuse for full tracing of agent interactions.</li>
-                  <li>Led org-wide migration to a next-generation dataset platform, owning documentation and cross-team coordination to ensure zero-disruption adoption across the Engineering Plan &amp; Analytics organization.</li>
+                  <li>Led org-wide migration to a next-generation data catalog platform, owning documentation and cross-team coordination to ensure zero disruption across multiple engineering and analytics teams.</li>
                 </ul>
               </div>
 
@@ -133,9 +133,9 @@
                 <ul class="timeline-bullets">
                   <li>Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours by identifying only 10GB was needed for reporting. Redesigned with cross-account S3 crawlers and SparkSQL partition pruning, cutting runtime from 40 hours to 30 minutes and unblocking weekly executive reporting that multiple business units depended on.</li>
                   <li>Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies.</li>
-                  <li>Built an event-driven ticket routing system using Lambda and AWS CDK that automatically parses warehouse PIT sensor failure notifications, creates tickets, routes them to the responsible team, consolidates multiple failures for the same device, and auto-resolves transient failures when devices recover, eliminating ~200 daily manual email reviews.</li>
-                  <li>Engineered data extraction pipelines to ingest fleet telemetry from multiple PIT vendors (Raymond and Hyster) across US and European fulfillment centers, pulling from 40+ paginated API endpoints. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow.</li>
-                  <li>Owned end-to-end security certification to enable Confidential-classified data processing in the enterprise data lake. Authored architecture documentation, threat mitigations, and worked cross-organizationally to achieve clearance.</li>
+                  <li>Built an event-driven ticket routing system using Lambda and AWS CDK that automatically parses warehouse equipment sensor failure notifications, creates tickets, routes them to the responsible team, consolidates multiple failures for the same device, and auto-resolves transient failures when devices recover, eliminating ~200 daily manual email reviews.</li>
+                  <li>Engineered data extraction pipelines to ingest fleet telemetry from multiple warehouse equipment vendors (Raymond and Hyster) across US and European fulfillment centers, pulling from 40+ paginated API endpoints. Executed a 2-year historical backfill into the enterprise data lake and replaced a legacy Redshift cluster with a lake-native workflow.</li>
+                  <li>Expanded the data lake to handle sensitive and restricted datasets by completing a formal security certification process, authoring architecture documentation and threat mitigations through cross-functional review.</li>
                 </ul>
               </div>
 
@@ -365,11 +365,9 @@
         <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
           <h3 class="skill-group-title">Data Processing</h3>
           <div class="skill-tags">
-            <span class="tag">Apache Spark</span>
             <span class="tag">AWS Glue</span>
             <span class="tag">EMR Serverless</span>
             <span class="tag">Azure Databricks</span>
-            <span class="tag">Informatica</span>
           </div>
         </div>
 
@@ -378,6 +376,7 @@
           <div class="skill-tags">
             <span class="tag">AWS</span>
             <span class="tag">Azure</span>
+            <span class="tag">Databricks</span>
           </div>
         </div>
 
