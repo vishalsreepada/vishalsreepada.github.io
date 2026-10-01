@@ -674,7 +674,7 @@ section { padding: 100px 2rem; }
 
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
 
@@ -686,6 +686,13 @@ section { padding: 100px 2rem; }
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cert-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .cert-issuer {
@@ -708,9 +715,15 @@ section { padding: 100px 2rem; }
   font-family: var(--mono);
 }
 
-.cert-expired {
-  opacity: 0.45;
+.cert-link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
 }
+
+.cert-link i { font-size: 0.65rem; }
 
 /* ===================== EDUCATION ===================== */
 #education { background: var(--bg-card); }

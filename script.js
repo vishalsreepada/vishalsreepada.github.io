@@ -106,3 +106,24 @@ window.addEventListener('load', () => {
     });
   });
 });
+
+// LinkedIn-style tenure ("2 yrs 5 mos"), counting start and end months inclusively
+function formatTenure(start, end) {
+  const [sy, sm] = start.split('-').map(Number);
+  const now = new Date();
+  const [ey, em] = end === 'present'
+    ? [now.getFullYear(), now.getMonth() + 1]
+    : end.split('-').map(Number);
+  const total = (ey * 12 + em) - (sy * 12 + sm) + 1;
+  const yrs = Math.floor(total / 12);
+  const mos = total % 12;
+  const parts = [];
+  if (yrs) parts.push(`${yrs} yr${yrs > 1 ? 's' : ''}`);
+  if (mos) parts.push(`${mos} mo${mos > 1 ? 's' : ''}`);
+  return parts.join(' ');
+}
+
+document.querySelectorAll('.duration, .timeline-company-span').forEach(el => {
+  const tenure = formatTenure(el.dataset.start, el.dataset.end);
+  el.textContent = el.classList.contains('duration') ? `  ·  ${tenure}` : tenure;
+});

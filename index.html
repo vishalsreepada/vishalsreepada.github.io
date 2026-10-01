@@ -111,13 +111,14 @@
 
             <div class="timeline-company-header">
               <h3 class="timeline-company-name">Amazon</h3>
+              <span class="timeline-company-span" data-start="2022-04" data-end="present"></span>
             </div>
 
             <div class="timeline-subroles">
 
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Data Engineer II</p>
-                <span class="timeline-date">May 2024 &ndash; Present &nbsp;&middot;&nbsp; Austin, TX</span>
+                <span class="timeline-date">May 2024 &ndash; Present<span class="duration" data-start="2024-05" data-end="present"></span> &nbsp;&middot;&nbsp; Austin, TX</span>
                 <ul class="timeline-bullets">
                   <li>Owned and evolved the enterprise data lake platform across 63+ production workflows using a 4-layer medallion architecture (Landing &rarr; Raw &rarr; Transform &rarr; Refine) with intelligent compute selection across Lambda, AWS Glue, and EMR Serverless. Integrated Apache Iceberg on high-concurrency datasets for ACID compliance and time travel.</li>
                   <li>Built the backend service to bulk register 6,000+ datasets into the enterprise data catalog, replacing a manual onboarding process that took ~30 minutes per table. Engineered an AI enrichment pipeline using a Strands Agent on Bedrock AgentCore that auto-generates table descriptions, column metadata, and READMEs with automated data classification using specialized tools to read classification wikis and profile data directly.</li>
@@ -129,7 +130,7 @@
 
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Data Engineer</p>
-                <span class="timeline-date">Apr 2022 &ndash; Apr 2024 &nbsp;&middot;&nbsp; Seattle, WA</span>
+                <span class="timeline-date">Apr 2022 &ndash; Apr 2024<span class="duration" data-start="2022-04" data-end="2024-04"></span> &nbsp;&middot;&nbsp; Seattle, WA</span>
                 <ul class="timeline-bullets">
                   <li>Diagnosed and resolved a 1TB executive analytics pipeline running 40+ hours by identifying only 10GB was needed for reporting. Redesigned with cross-account S3 crawlers and SparkSQL partition pruning, cutting runtime from 40 hours to 30 minutes and unblocking weekly executive reporting that multiple business units depended on.</li>
                   <li>Decommissioned 9 legacy project management tools and migrated 600+ users across Europe to a single unified data platform in a planned one-day cutover with zero data loss. Owned schema mapping for 50+ tables, authored SQL and Glue backfill scripts, and built compatibility pipelines to support downstream tool dependencies.</li>
@@ -148,11 +149,12 @@
           <div class="timeline-content">
             <div class="timeline-company-header">
               <h3 class="timeline-company-name">Blue.cloud</h3>
+              <span class="timeline-company-span" data-start="2021-06" data-end="2022-04"></span>
             </div>
             <div class="timeline-subroles">
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Associate Data Engineer</p>
-                <span class="timeline-date">Jun 2021 &ndash; Apr 2022 &nbsp;&middot;&nbsp; Greater Chicago Area</span>
+                <span class="timeline-date">Jun 2021 &ndash; Apr 2022<span class="duration" data-start="2021-06" data-end="2022-04"></span> &nbsp;&middot;&nbsp; Greater Chicago Area</span>
                 <ul class="timeline-bullets">
               <li>Built PySpark data pipelines in Azure Databricks for ETL from diverse file formats to Azure Data Lake Storage and Amazon S3, providing insights into customer usage patterns.</li>
               <li>Developed and deployed AWS Lambda functions for data extraction, parsing, and ingestion of nested JSON from S3 into Snowflake.</li>
@@ -169,11 +171,12 @@
           <div class="timeline-content">
             <div class="timeline-company-header">
               <h3 class="timeline-company-name">George Mason University</h3>
+              <span class="timeline-company-span" data-start="2020-01" data-end="2021-05"></span>
             </div>
             <div class="timeline-subroles">
               <div class="timeline-subrole">
                 <p class="timeline-subrole-title">Graduate Teaching Assistant</p>
-                <span class="timeline-date">Jan 2020 &ndash; May 2021 &nbsp;&middot;&nbsp; Fairfax, VA</span>
+                <span class="timeline-date">Jan 2020 &ndash; May 2021<span class="duration" data-start="2020-01" data-end="2021-05"></span> &nbsp;&middot;&nbsp; Fairfax, VA</span>
                 <ul class="timeline-bullets">
               <li>Assisted in Computer Science and IST departments across courses including Big Data Technologies, Network Security, Security Accreditation of Information Systems, and Essentials of Computer Science.</li>
               <li>Held weekly office hours, graded assignments, and developed curriculum materials in collaboration with faculty.</li>
@@ -438,26 +441,36 @@
       <div class="certs-row" data-aos="fade-up">
         <h3 class="certs-title">Certifications</h3>
         <div class="certs-grid">
-          <div class="cert-card">
+          <a class="cert-card" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/0c696c4fb43741bb8174bd4137cc770d" target="_blank" rel="noopener">
+            <span class="cert-issuer">AWS</span>
+            <span class="cert-name">AI Practitioner</span>
+            <span class="cert-date">Issued Sep 2026</span>
+            <span class="cert-link">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <a class="cert-card" href="https://www.credly.com/badges/11a6760b-73d0-427d-8ac3-e58696481c0d" target="_blank" rel="noopener">
             <span class="cert-issuer">AWS</span>
             <span class="cert-name">Cloud Practitioner</span>
-            <span class="cert-date">Active</span>
-          </div>
-          <div class="cert-card">
-            <span class="cert-issuer">Microsoft</span>
-            <span class="cert-name">Azure Data Fundamentals</span>
-            <span class="cert-date">Active</span>
-          </div>
-          <div class="cert-card cert-expired">
+            <span class="cert-date">Issued Aug 2023</span>
+            <span class="cert-link">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <a class="cert-card" href="https://www.credly.com/badges/cc0906c8-8ca0-4e97-bbf2-f2766f366f85" target="_blank" rel="noopener">
             <span class="cert-issuer">Microsoft</span>
             <span class="cert-name">Azure Data Engineer Associate</span>
-            <span class="cert-date">Expired</span>
-          </div>
-          <div class="cert-card cert-expired">
+            <span class="cert-date">Issued Oct 2021</span>
+            <span class="cert-link">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <a class="cert-card" href="https://www.credly.com/badges/8946c1ab-28ed-4e84-8b2d-4291b1beae93" target="_blank" rel="noopener">
             <span class="cert-issuer">Snowflake</span>
             <span class="cert-name">SnowPro Core</span>
-            <span class="cert-date">Expired</span>
-          </div>
+            <span class="cert-date">Issued Sep 2021</span>
+            <span class="cert-link">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <a class="cert-card" href="https://www.credly.com/badges/70166a6b-002f-4ba2-85b1-8c696829ab7c" target="_blank" rel="noopener">
+            <span class="cert-issuer">Microsoft</span>
+            <span class="cert-name">Azure Data Fundamentals</span>
+            <span class="cert-date">Issued Jun 2021</span>
+            <span class="cert-link">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
         </div>
       </div>
 
